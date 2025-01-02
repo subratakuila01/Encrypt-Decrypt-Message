@@ -24,6 +24,14 @@ def decrypt():
         decode_message = message.encode('ascii')
         base64_bytes = base64.b64decode(decode_message)  # Correct base64 decoding
         decoded_message = base64_bytes.decode('ascii')  # Decode back to ASCII
+        
+        decode_message = decoded_message.encode('ascii')
+        base64_bytes = base64.b64decode(decode_message)  # Correct base64 decoding
+        decoded_message = base64_bytes.decode('ascii')  # Decode back to ASCII
+        
+        decode_message = decoded_message.encode('ascii')
+        base64_bytes = base64.b64decode(decode_message)  # Correct base64 decoding
+        decoded_message = base64_bytes.decode('ascii')  # Decode back to ASCII
 
         # Add a label and text box to show the decrypted message
         Label(window2, text="Decrypted Message", font='arial', bg='#18ba33', fg='#FFFFFF').place(x=10, y=0)
@@ -60,6 +68,14 @@ def encrypt():
 
         # Encode the message using base64
         encode_message = message.encode('ascii')
+        base64_bytes = base64.b64encode(encode_message)
+        encoded_message = base64_bytes.decode('ascii') # Convert bytes to string
+        
+        encode_message = encoded_message.encode('ascii')
+        base64_bytes = base64.b64encode(encode_message)
+        encoded_message = base64_bytes.decode('ascii')  # Convert bytes to string
+        
+        encode_message = encoded_message.encode('ascii')
         base64_bytes = base64.b64encode(encode_message)
         encoded_message = base64_bytes.decode('ascii')  # Convert bytes to string
 
